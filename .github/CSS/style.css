@@ -4,7 +4,7 @@
     color: #ffffff;
 }
 
-header {
+.header {
     background-color: #23174da1;
     height: 80px;
     width: 66%;
@@ -12,7 +12,7 @@ header {
     margin: 5px;
 }
  
-h1 {
+.h1 {
     color: #ffffff;
     position: absolute;
     left: 40px;
@@ -121,4 +121,17 @@ h1 {
     right: 6vw;
 }
 
+/*響應式設計語法*/
 
+ @media screen and (max-width: 768px) {
+    .block01 {
+        display: none;
+    }
+    .icon_01 {
+        display: none;
+    }
+    .btn {
+        display: none;
+    }
+  }
+  
