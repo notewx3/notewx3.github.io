@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+header {
+    background-color: #23174da1;
+    height: 80px;
+    width: 66%;
+    position: absolute;
+    margin: 5px;
+}
+ 
+h1 {
+    color: #ffffff;
+    position: absolute;
+    left: 40px;
+    line-height: 80px;
+}
+
+.BK {
+    background-color: #251a31;
+    height: 100vh;
+    background-image: url("../IMG/enjoy_img/背景.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.KV {
+    height: 100vh;
+    background-image: url("../IMG/enjoy_img/角色.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*滿版*/
+    background-position: center bottom;
+    /*對齊中間 底下*/
+}
+
+.block01 {
+    background-color: #000000b0;
+    background-position: right;
+    width: 33%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*上下置中*/
+    align-items: center;
+    /*左右置中*/
+    justify-content: center;
+    /*上下置中*/
+    float: right;
+    /*置右*/
+    
+}
+
+.btn,
+.btn:focus {
+    position: relative;
+    /*相對*/
+    min-width: 200px;
+    background: transparent;
+    color: #8952c7;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: inherit;
+    padding: 10px 20px;
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(118, 72, 204, 0.5);
+    outline: 1px solid !important;
+    outline-color: rgba(118, 72, 204, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: 10px;
+}
+.btn:hover {
+    color: #8952c7;
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(118, 72, 204, 0.5), 0 0 20px rgba(109, 30, 155, 0.2);
+    outline: 1px solid !important;
+    outline-color: rgba(68, 27, 143, 0) !important;
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #9a64c7;
+}
+
+.cut {
+    height: 40px;
+}
+
+.icon_01 {
+    list-style: square;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.block02 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 30px;
+}
+
+.icon_01 div {
+    margin: 0 10px;
+}
+
+.icon_01 img {
+    width: 100%;
+    
+}
+
+.icon_02 {
+    margin: 5px 30px;
+    position: relative;
+    right: 6vw;
+}
+
+
