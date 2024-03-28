@@ -127,11 +127,36 @@ header h1 {
     right: 6vw;
 }
 
+.menu_btn {
+    display: none;
+}
+
 /*響應式設計語法*/
 
  @media screen and (max-width: 768px) {
     .block01 {
         display: none;
+    }
+    header {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        margin: 20px 0 ;
+    }
+    header h1 {
+        left: 50%;
+        transform: translateX(-50%);
+        letter-spacing: 3px;
+        font-size: 30px;
+    }
+    .menu_btn {
+        display: block;
+        background-color: transparent;
+        font-size: 35px;
+        position: absolute;
+        top: 38px;
+        right: 40px;
+        border: none;
     }
     .icon_01 {
         display: none;
@@ -139,5 +164,7 @@ header h1 {
     .btn {
         display: none;
     }
+
+
   }
   
