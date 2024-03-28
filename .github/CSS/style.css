@@ -7,16 +7,22 @@
 header {
     background-color: #23174da1;
     height: 80px;
-    width: 66%;
+    width: calc(66.66% - 40px);
     position: absolute;
-    margin: 5px;
+    margin: 20px;
+
+    
+
 }
  
-.h1 {
+header h1 {
     color: #ffffff;
     position: absolute;
     left: 40px;
     line-height: 80px;
+    font-family:Microsoft JhengHei;
+    font-weight:lighter;
+    letter-spacing: 10px;
 }
 
 .BK {
@@ -41,7 +47,7 @@ header {
 .block01 {
     background-color: #000000b0;
     background-position: right;
-    width: 33%;
+    width: 33.33%;
     height: 100vh;
     display: flex;
     flex-direction: column;
