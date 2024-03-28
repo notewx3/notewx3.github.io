@@ -51,7 +51,7 @@ header h1 {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /*上下置中*/
+    /*上下排列*/
     align-items: center;
     /*左右置中*/
     justify-content: center;
@@ -131,6 +131,39 @@ header h1 {
     display: none;
 }
 
+.block_say {
+    background-color: transparent;
+    width: 33.33%;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -100px;
+
+
+}
+
+.speech-bubble {
+	position: relative;
+	background: #8081b3;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 15%;
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-top-color: #8081b3;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -16.5px;
+	margin-bottom: -28px;
+}
+
 /*響應式設計語法*/
 
  @media screen and (max-width: 768px) {
@@ -147,7 +180,7 @@ header h1 {
         left: 50%;
         transform: translateX(-50%);
         letter-spacing: 3px;
-        font-size: 30px;
+        font-size: 28px;
     }
     .menu_btn {
         display: block;
