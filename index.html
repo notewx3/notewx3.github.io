@@ -17,15 +17,15 @@
             <button class="menu_btn">&#9776;</button> 
             <div class="block01">
                 
-                <a href="javascript: void(0)" class="btn">
+                <a href="javascript: speak(1)" class="btn">
                     問候
                 </a>
                 <div class="cut"></div>
-                <a href="javascript: void(0)" class="btn">
+                <a href="javascript: speak(2)" class="btn">
                     聊天
                 </a>
                 <div class="cut"></div>
-                <a href="javascript: void(0)" class="btn">
+                <a href="javascript: speak(3)" class="btn">
                     調情
                 </a>
                 <div class="cut"></div>
@@ -53,7 +53,7 @@
         <section class="home_screen">
             <div class="block_say">
             <hgroup class="speech-bubble">
-                <h3>你可能在想我到底在做甚麼挖歌<br>但其實窩也不知道@@</h3>
+                <h3 id="say">你可能在想我到底在做甚麼挖歌<br>但其實窩也不知道@@</h3>
             
             </hgroup>
             </div>
@@ -66,4 +66,23 @@
 
 </body>
 </html>
-<!--有改成功會看到這行-->
+
+<script>
+
+function speak(chat_library){
+
+    if(chat_library == 1){
+        $("#say").css("color", "blue");
+    }
+
+    if(chat_library == 2){
+        $("#say").css("color","red");
+    }
+
+    if(chat_library == 3){
+        $("#say").css("color","yellow");
+    }
+
+    
+}
+</script>
