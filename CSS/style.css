@@ -148,6 +148,7 @@ header h1 {
 	background: #25255270;
 	border-radius: .4em;
     padding: 10px;
+    top: 8vh;
 }
 
 .speech-bubble:after {
