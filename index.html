@@ -81,24 +81,24 @@
     }
 
     let say1_arr = ["早安", "藍色的文字內容2222", "藍色的文字內容3s33333","藍色的文字內容13412341234123"];
-    let say２_arr = ["早安", "色的120522", "125文字內容333333","5555色的文字內容13412341234123"];
+    let say2_arr = ["早安", "色的120522", "125文字內容333333","5555色的文字內容13412341234123"];
     let say3_arr = ["早安", "色的120522", "125文字內容333333","5555色的文字內容13412341234123"];
 
     function speak(chat_library){
 
     if(chat_library == 1){
-        var r = getRandomInt(say1_arr.length);
-        $("#say").css("color", "blue").text(say1_arr[r]);
+        var r1 = getRandomInt(say1_arr.length);
+        $("#say").css("color", "blue").text(say1_arr[r1]);
     }
 
     if(chat_library == 2){
-        var r = getRandomInt(say２_arr.length);
-        $("#say").css("color","red").text(say２_arr[r]);
+        var r2 = getRandomInt(say2_arr.length);
+        $("#say").css("color","red").text(say2_arr[r2]);
     }
 
     if(chat_library == 3){
-        var r = getRandomInt(say3_arr.length);
-        $("#say").css("color","yellow").text(say3_arr[r]);
+        var r3 = getRandomInt(say3_arr.length);
+        $("#say").css("color","yellow").text(say3_arr[r3]);
     }
 
     
