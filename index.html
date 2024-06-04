@@ -76,19 +76,29 @@
 </html>
 
 <script>
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
 
-function speak(chat_library){
+    let say1_arr = ["早安", "藍色的文字內容2222", "藍色的文字內容3s33333","藍色的文字內容13412341234123"];
+    let say２_arr = ["早安", "色的120522", "125文字內容333333","5555色的文字內容13412341234123"];
+    let say3_arr = ["早安", "色的120522", "125文字內容333333","5555色的文字內容13412341234123"];
+
+    function speak(chat_library){
 
     if(chat_library == 1){
-        $("#say").css("color", "blue").text("藍色的文字內容");
+        var r = getRandomInt(say1_arr.length);
+        $("#say").css("color", "blue").text(say1_arr[r]);
     }
 
     if(chat_library == 2){
-        $("#say").css("color","red");
+        var r = getRandomInt(say２_arr.length);
+        $("#say").css("color","red").text(say２_arr[r]);
     }
 
     if(chat_library == 3){
-        $("#say").css("color","yellow");
+        var r = getRandomInt(say3_arr.length);
+        $("#say").css("color","yellow").text(say3_arr[r]);
     }
 
     
