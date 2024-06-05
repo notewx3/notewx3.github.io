@@ -16,8 +16,9 @@
         <section class="menu">  
             <button class="menu_btn">&#9776;</button> 
             <div class="block01">
+                <!--按鈕加了id(移走)-->
                 
-                <a href="javascript: speak(1)" class="btn">問候</a>
+                <a href="javascript: speak(1)" class="btn" id="show-dialog">問候</a><!--移到這-->
 
                 <div class="cut"></div>
 
@@ -59,7 +60,8 @@
         </section>
 
         <section class="home_screen">
-            <div class="block_say">
+            <div id="dialog" class="block_say">
+                <!--新增動畫效果-->
             <hgroup class="speech-bubble">
                 <h3 id="say">你可能在想我到底在做甚麼挖歌<br>但其實窩也不知道@@</h3>
             
@@ -75,32 +77,4 @@
 </body>
 </html>
 
-<script>
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-    }
-
-    let say1_arr = ["早安", "藍色的文字內容2222", "藍色的文字內容3s33333","藍色的文字內容13412341234123"];
-    let say2_arr = ["早安", "色的120522", "125文字內容333333","5555色的文字內容13412341234123"];
-    let say3_arr = ["早安", "色的120522", "125文字內容333333","5555色的文字內容13412341234123"];
-
-    function speak(chat_library){
-
-    if(chat_library == 1){
-        var r1 = getRandomInt(say1_arr.length);
-        $("#say").css("color", "blue").text(say1_arr[r1]);
-    }
-
-    if(chat_library == 2){
-        var r2 = getRandomInt(say2_arr.length);
-        $("#say").css("color","red").text(say2_arr[r2]);
-    }
-
-    if(chat_library == 3){
-        var r3 = getRandomInt(say3_arr.length);
-        $("#say").css("color","yellow").text(say3_arr[r3]);
-    }
-
-    
-};
-</script>
+<script src="JS/script_use.js"></script>
