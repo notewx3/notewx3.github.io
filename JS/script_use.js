@@ -15,13 +15,11 @@ document.getElementById('show-dialog').addEventListener('click', function() {
     }, 3000); // Show the dialog for 3 seconds
 });
 
-
 //從html移動過來了
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
-console.log(555);
 
 let say1_arr = ["早安111", "藍色的文字內容2222", "藍色的文字內容3s33333","藍色的文字內容13412341234123"];
 let say2_arr = ["早安555", "色的120522", "125文字內容333333","5555色的文字內容13412341234123"];

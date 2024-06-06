@@ -10,9 +10,6 @@ header {
     width: calc(66.66% - 40px);
     position: absolute;
     margin: 20px;
-
-    
-
 }
  
 header h1 {
@@ -44,8 +41,6 @@ header h1 {
     /*對齊中間 底下*/
 }
 
-
-
 .block01 {
     background-color: #000000b0;
     background-position: right;
@@ -60,7 +55,6 @@ header h1 {
     /*上下置中*/
     float: right;
     /*置右*/
-    
 }
 
 .btn,
@@ -104,7 +98,6 @@ header h1 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    
 }
 
 .block02 {
@@ -120,7 +113,6 @@ header h1 {
 
 .icon_01 img {
     width: 100%;
-    
 }
 
 .icon_02 {
@@ -167,20 +159,14 @@ header h1 {
     }
 }
 
-/*這可能有問題跟block_say撞車*/
+/*這可能有問題跟block_say撞車(位置)*/
 #dialog {
     font-family:Microsoft JhengHei;
-
     opacity: 0;
     transition: opacity 0.5s;
     position: absolute;
-    bottom: 65%;
+    bottom: 70%;
     left: 50%;
-    transform: translate(-50%, -60%);
-    padding: 20px 30px;
-
-    border-radius: 10px;
-    text-align: center;
 }
 
 .block_say {
@@ -195,7 +181,7 @@ header h1 {
     animation: bounceOut 0.5s forwards;
 }
 
-/*下面對話框跟dialog撞車*/
+/*下面對話框跟dialog撞車(位置)*/
 /*.block_say {
     background-color: transparent;
     width: 33.33%;
@@ -206,6 +192,7 @@ header h1 {
     bottom: -100px;
 }*/
 
+/*對話框形狀*/
 .speech-bubble {
 	position: relative;
 	background: #25255270;
@@ -213,7 +200,6 @@ header h1 {
     padding: 10px;
     top: 8vh;
    outline: 0.6px solid rgba(228, 220, 231, 0.6);
- 
    outline-offset: -4px;
 }
 
