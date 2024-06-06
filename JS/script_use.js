@@ -46,6 +46,7 @@ if(chat_library == 3){
 
 };
 
+/*網路搜來的菜單 */
 $(document).ready(() => {
     $('.menu_btn').click(function(){
       //避免 a 標籤會觸發
@@ -69,6 +70,7 @@ $(document).ready(() => {
     })
   });
 
+  /*chatgpt菜單 */
   function bong() {
     var menu = document.getElementById("menu"); // 獲取菜單元素
     var hamburger = document.querySelector(".menu_btn"); // 獲取漢堡按鈕
