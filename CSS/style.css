@@ -128,7 +128,7 @@ header h1 {
     display: none;
 }
 
-.hamburger {
+.menu_btn {
     display: none;
 }
 
@@ -245,15 +245,7 @@ hgroup h3 {
         /*上下置中*/
         float: right;
         /*置右*/
-        position: fixed;
-        top: 0;
-        right: -250px;
-        width: 250px;
-        height: 100%;
-        transition: right 0.3s;
-        padding: 20px;
-
-
+        
     }
     header {
         left: 50%;
@@ -267,7 +259,7 @@ hgroup h3 {
         letter-spacing: 3px;
         font-size: 28px;
     }
-    .hamburger {
+    .menu_btn {
         display: block;
         background-color: transparent;
         font-size: 35px;
