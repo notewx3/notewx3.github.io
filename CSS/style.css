@@ -124,7 +124,11 @@ header h1 {
 .food 
 /*我在這裡，緩緩，我搞對話框*/
 
-.menu_btn {
+.menu {
+    display: none;
+}
+
+.hamburger {
     display: none;
 }
 
@@ -226,8 +230,30 @@ hgroup h3 {
 /*響應式設計語法*/
 
  @media screen and (max-width: 768px) {
+    /*菜單*/
     .block01 {
-        display: none;
+        background-color: #000000b0;
+        background-position: right;
+        width: 33.33%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        /*上下排列*/
+        align-items: center;
+        /*左右置中*/
+        justify-content: center;
+        /*上下置中*/
+        float: right;
+        /*置右*/
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        transition: right 0.3s;
+        padding: 20px;
+
+
     }
     header {
         left: 50%;
@@ -241,7 +267,7 @@ hgroup h3 {
         letter-spacing: 3px;
         font-size: 28px;
     }
-    .menu_btn {
+    .hamburger {
         display: block;
         background-color: transparent;
         font-size: 35px;
