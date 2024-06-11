@@ -121,11 +121,15 @@ header h1 {
     right: 6vw;
 }
 
-.food 
-/*我在這裡，緩緩，我搞對話框*/
+.food {
+    position: absolute;
+    bottom: 33.4%;
+    left: 17.3%;
 
-.menu {
-    display: none;
+}
+
+.menu{
+    display: block;
 }
 
 .menu_btn {
@@ -259,6 +263,10 @@ hgroup h3 {
         letter-spacing: 3px;
         font-size: 28px;
     }
+    /*.menu{
+        display: none;
+    }*/
+
     .menu_btn {
         display: block;
         background-color: transparent;

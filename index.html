@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="CSS/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="JS/jquery-3.7.1.min.js"></script>
+    <script src="JS/script_use.js"></script>
 </head>
 <body>
     <header>
@@ -13,21 +14,23 @@
     </header>
     <main class="BK">
     <main class="KV">
+
+
         <section class="menu">  
             <!--下面漢堡選單按鈕-->
             <button class="menu_btn" onclick="bong"()>&#9776;</button> 
             <div class="block01"  id="show-dialog" id="menu">
             <!--按鈕加了出現效果show-dialog-->
                 
-                <a href="javascript: speak(1)" class="btn" onclick="showMessage()">問候</a>
+                <button class="btn" onclick="speak(1)">問候</button>
 
                 <div class="cut"></div>
 
-                <a href="javascript: speak(2)" class="btn" onclick="showMessage()">聊天</a>
+                <button class="btn" onclick="speak(2)">聊天</button>
 
                 <div class="cut"></div>
 
-                <a href="javascript: speak(3)" class="btn" onclick="showMessage()">勉勵</a>
+                <button class="btn" onclick="speak(3)">勉勵</button>
 
                 <div class="cut"></div>
 
@@ -64,17 +67,17 @@
             <div id="dialog" class="block_say"><!--新增動畫效果-->
             <hgroup class="speech-bubble">
                 <h3 id="say">你可能在想我到底在做甚麼挖歌<br>但其實窩也不知道@@</h3>
-            
             </hgroup>
             </div>
-
+            <div>
+                <div class="food"><img src="IMG/enjoy_img/fta_01.png"></div>
+            </div>
         </section>
         
     </main>
     </main>
 
 
+
 </body>
 </html>
-
-<script src="JS/script_use.js"></script>
