@@ -35,6 +35,7 @@ header h1 {
     height: 100vh;
     background-image: url("../IMG/enjoy_img/角色.PNG");
     background-repeat: no-repeat;
+    /*不重複*/
     background-size: cover;
     /*滿版*/
     background-position: center bottom;
@@ -104,11 +105,11 @@ header h1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 5px 30px;
+    
 }
 
 .icon_01 div {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .icon_01 img {
@@ -121,11 +122,47 @@ header h1 {
     right: 6vw;
 }
 
-.food {
-    position: absolute;
-    bottom: 33.4%;
-    left: 17.3%;
+.pickfood01 {
+    background-image: url("../IMG/enjoy_img/food_01.PNG");
+    background-color: #ffffff00;
+    background-size: cover;
+    width:50px;
+    height:50px;
+    
+}
 
+.pickfood02 {
+    background-image: url("../IMG/enjoy_img/food_02.PNG");
+    background-color: #ffffff00;
+    background-size: cover;
+    width:50px;
+    height:50px;
+}
+
+.pickfood03 {
+    background-image: url("../IMG/enjoy_img/food_03.PNG");
+    background-color: #ffffff00;
+    background-size: cover;
+    width:50px;
+    height:50px;
+}
+
+.pickfood04 {
+    background-image: url("../IMG/enjoy_img/food_04.PNG");
+    background-color: #ffffff00;
+    background-size: cover;
+    width:50px;
+    height:50px;
+}
+
+.food {
+    display: none;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("../IMG/enjoy_img/fta_01.PNG");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    /*對齊中間 底下*/
 }
 
 .menu{

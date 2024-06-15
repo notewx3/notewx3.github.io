@@ -1,3 +1,5 @@
+//點擊按鈕 觸發id:show-dialog
+//顯示對話框
 document.getElementById('show-dialog').addEventListener('click', function () {
     console.log('觸發按鈕');
     playDialog();
@@ -18,12 +20,18 @@ function playDialog() {
     }, 3000); // Show the dialog for 3 seconds
 }
 
-//從html移動過來了
 
+
+
+
+
+
+
+//從html移動過來了
+//對話框的內容隨機
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
-
 
 function speak(chat_library) {
     let say1_arr = ["早安111", "藍色的文字內容2222", "藍色的文字內容3s33333", "藍色的文字內容13412341234123"];
@@ -48,8 +56,8 @@ function speak(chat_library) {
         playDialog();
     }
 
-    /**/
 };
+
 
 /*網路搜來的菜單 */
 $(document).ready(() => {
@@ -74,6 +82,7 @@ $(document).ready(() => {
         $("html,body").animate({scrollTop: lastScrollPoint}, 800);
     })
 });
+
 
 /*chatgpt菜單 */
 function bong() {
