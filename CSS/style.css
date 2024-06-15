@@ -156,7 +156,7 @@ header h1 {
 }
 
 .food {
-    display: none;
+    display: block;
     height: 100vh;
     background-size: cover;
     background-image: url("../IMG/enjoy_img/fta_01.PNG");
