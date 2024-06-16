@@ -51,6 +51,7 @@ function speak(chat_library) {
 };
 
 
+/*食物顯示*/
 function eat(table_library) {
     let food1_arr = ["../IMG/enjoy_img/fta_01.PNG"];
     let food2_arr = ["../IMG/enjoy_img/fta_02.PNG"];
