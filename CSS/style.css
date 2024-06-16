@@ -156,7 +156,7 @@ header h1 {
 }
 
 .food {
-    display: block;
+    display: none;
     height: 100vh;
     background-size: cover;
     background-image: url("../IMG/enjoy_img/fta_01.PNG");
@@ -164,6 +164,21 @@ header h1 {
     background-position: center bottom;
     /*對齊中間 底下*/
 }
+
+.hidden {
+    display: none;
+}
+
+.food-bounce-in {
+    display: block;
+    animation: bounceIn 1s forwards;
+}
+
+.food-bounce-out {
+    animation: bounceOut 0.5s forwards;
+}
+
+
 
 .menu{
     display: block;

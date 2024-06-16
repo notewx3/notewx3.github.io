@@ -1,8 +1,7 @@
 //點擊按鈕 觸發id:show-dialog
 //顯示對話框
 document.getElementById('show-dialog').addEventListener('click', function () {
-    console.log('觸發按鈕');
-    playDialog();
+
 });
 
 /*動畫*/
@@ -19,13 +18,6 @@ function playDialog() {
         }, 500); // Wait for the bounce-out animation to complete
     }, 3000); // Show the dialog for 3 seconds
 }
-
-
-
-
-
-
-
 
 //從html移動過來了
 //對話框的內容隨機
@@ -57,6 +49,45 @@ function speak(chat_library) {
     }
 
 };
+
+
+document.getElementById('show-food').addEventListener('click', function () {
+    playDialog('food-dialog', 'food');
+});
+
+function playDialog(dialogId, uniqueClass) {
+    const dialog = document.getElementById(dialogId);
+    const bounceInClass = `${uniqueClass}-bounce-in`;
+    const bounceOutClass = `${uniqueClass}-bounce-out`;
+    const hiddenClass = 'hidden';
+
+    dialog.classList.remove(hiddenClass, bounceOutClass);
+    dialog.classList.add(bounceInClass);
+
+    setTimeout(function () {
+        dialog.classList.remove(bounceInClass);
+        dialog.classList.add(bounceOutClass);
+        setTimeout(function () {
+            dialog.classList.add(hiddenClass);
+        }, 500); // 等待 bounce-out 動畫完成
+    }, 3000); // 顯示圖片 3 秒
+}
+
+/*function eat(chat_library) {
+    
+    if (chat_library == a) {
+       $("#eatfood").css("color", "blue").text(say1_arr[r1]);
+        playDialog();
+    }
+
+};
+*/
+
+
+
+
+
+
 
 
 /*網路搜來的菜單 */
