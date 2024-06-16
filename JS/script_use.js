@@ -51,7 +51,8 @@ function speak(chat_library) {
 };
 
 
-document.getElementById('show-food').addEventListener('click', function () {
+//圖片動畫
+/*document.getElementById('show-food').addEventListener('click', function () {
     playDialog('food-dialog', 'food');
 });
 
