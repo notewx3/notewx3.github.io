@@ -155,11 +155,41 @@ header h1 {
     height:50px;
 }
 
-#food-ontable {
+#food-ontable1 {
     display: none;
     height: 100vh;
     background-size: cover;
     background-image: url("../IMG/enjoy_img/fta_01.PNG");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    /*對齊中間 底下*/
+}
+
+#food-ontable2 {
+    display: none;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("../IMG/enjoy_img/fta_02.PNG");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    /*對齊中間 底下*/
+}
+
+#food-ontable3 {
+    display: none;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("../IMG/enjoy_img/fta_03.PNG");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    /*對齊中間 底下*/
+}
+
+#food-ontable4 {
+    display: none;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("../IMG/enjoy_img/fta_04.PNG");
     background-repeat: no-repeat;
     background-position: center bottom;
     /*對齊中間 底下*/
