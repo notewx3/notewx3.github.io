@@ -51,39 +51,27 @@ function speak(chat_library) {
 };
 
 
-//圖片動畫
-/*document.getElementById('show-food').addEventListener('click', function () {
-    playDialog('food-dialog', 'food');
-});
+function eat(table_library) {
+    let food1_arr = ["../IMG/enjoy_img/fta_01.PNG"];
+    let food2_arr = ["../IMG/enjoy_img/fta_02.PNG"];
+    let food3_arr = ["../IMG/enjoy_img/fta_03.PNG"];
 
-function playDialog(dialogId, uniqueClass) {
-    const dialog = document.getElementById(dialogId);
-    const bounceInClass = `${uniqueClass}-bounce-in`;
-    const bounceOutClass = `${uniqueClass}-bounce-out`;
-    const hiddenClass = 'hidden';
 
-    dialog.classList.remove(hiddenClass, bounceOutClass);
-    dialog.classList.add(bounceInClass);
+    if (table_library == 1) {
+        $("food-ontable").css("display", "block").src(food1_arr[f1]);
+        playDialog();
+    }
+    if (table_library == 2) {
+        $("#food-dialog").css("display", "block").src(food2_arr[f2]);
+        playDialog();
+    }
 
-    setTimeout(function () {
-        dialog.classList.remove(bounceInClass);
-        dialog.classList.add(bounceOutClass);
-        setTimeout(function () {
-            dialog.classList.add(hiddenClass);
-        }, 500); // 等待 bounce-out 動畫完成
-    }, 3000); // 顯示圖片 3 秒
-}
-
-/*function eat(chat_library) {
-    
-    if (chat_library == a) {
-       $("#eatfood").css("color", "blue").text(say1_arr[r1]);
+    if (table_library == 3) {
+        $("#food-dialog").css("display", "block").src(food3_arr[f3]);
         playDialog();
     }
 
 };
-*/
-
 
 
 

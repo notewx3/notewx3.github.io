@@ -155,7 +155,7 @@ header h1 {
     height:50px;
 }
 
-.food {
+#food-ontable {
     display: none;
     height: 100vh;
     background-size: cover;
