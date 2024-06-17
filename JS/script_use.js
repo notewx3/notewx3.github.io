@@ -64,28 +64,28 @@ function eat(table_library) {
         $("#food-ontable2").css("display", "none").attr("src", food2_arr[0]);
         $("#food-ontable3").css("display", "none").attr("src", food3_arr[0]);
         $("#food-ontable4").css("display", "none").attr("src", food4_arr[0]);
-        playDialog("food-ontable1", "food");
+        playDialog("food-ontable1");
     } 
     if (table_library == 2) {
         $("#food-ontable2").css("display", "block").attr("src", food2_arr[0]);
         $("#food-ontable1").css("display", "none").attr("src", food1_arr[0]);
         $("#food-ontable3").css("display", "none").attr("src", food3_arr[0]);
         $("#food-ontable4").css("display", "none").attr("src", food4_arr[0]);
-        playDialog("food-ontable2", "food");
+        playDialog("food-ontable2");
     } 
     if (table_library == 3) {
         $("#food-ontable3").css("display", "block").attr("src", food3_arr[0]);
         $("#food-ontable1").css("display", "none").attr("src", food1_arr[0]);
         $("#food-ontable2").css("display", "none").attr("src", food2_arr[0]);
         $("#food-ontable4").css("display", "none").attr("src", food4_arr[0]);
-        playDialog("food-ontable3", "food");
+        playDialog("food-ontable3");
     }
     if (table_library == 4) {
         $("#food-ontable4").css("display", "block").attr("src", food4_arr[0]);
         $("#food-ontable1").css("display", "none").attr("src", food1_arr[0]);
         $("#food-ontable2").css("display", "none").attr("src", food2_arr[0]);
         $("#food-ontable3").css("display", "none").attr("src", food3_arr[0]);
-        playDialog("food-ontable4", "food");
+        playDialog("food-ontable4");
     }
 }
 
