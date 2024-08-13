@@ -1,0 +1,159 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+header {
+    background-color: #333333;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+#game-area {
+    position: relative;
+    width: 800px; /* 根據需要調整遊戲區域的寬度 */
+    height: 600px; /* 根據需要調整遊戲區域的高度 */
+    background-color: #000000; /* 添加背景色 */
+    margin: 0 auto; /* 將遊戲面板在水平方向上置中 */
+}
+
+#event-panel.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #333333;
+    text-align: center;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #555555;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #777777;
+}
+
+#character {
+    width: 50px;
+    height: 50px;
+    background-color: #00ff00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; /* 確保角色顯示在事件面板之上 */
+}
+
+#game-area {
+    position: relative;
+    width: 800px; /* 根據需要調整遊戲區域的寬度 */
+    height: 600px; /* 根據需要調整遊戲區域的高度 */
+    background-color: #000000; /* 添加背景色 */
+}
+
+#start-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+#start-button {
+    padding: 20px;
+    font-size: 24px;
+    background-color: #00ff00;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#red-square {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    z-index: 1;
+}
+
+#event-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #000000;
+    z-index: 4;
+    text-align: center; /* 確保選項居中 */
+}
+
+.hidden {
+    display: none;
+}
+
+#score {
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}

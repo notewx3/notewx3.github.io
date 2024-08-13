@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Game</title>
+    <link rel="stylesheet" href="CSS/styles01.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Interactive Web Game</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#game">Game</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>About the Game</h2>
+            <p>This is an interactive web game where you can control a character, trigger events, and make choices.</p>
+        </section>
+        <section id="game">
+            <h2>Game</h2>
+            <div id="game-area">
+                <div id="start-overlay">
+                    <button id="start-button">Start Game</button>
+                </div>
+                <div id="character"></div>
+                <div id="red-square"></div>
+            </div>
+            <div id="event-panel" class="hidden"></div>
+            <div id="score">Score: 0</div>
+            
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+    <script src="JS/scripts.js"></script>
+    
+</body>
+</html>
