@@ -50,8 +50,6 @@ function speak(chat_library) {
 
 };
 
-
-/*食物顯示*/
 function eat(table_library) {
     let food1_arr = ["../IMG/enjoy_img/fta_01.png"];
     let food2_arr = ["../IMG/enjoy_img/fta_02.png"];
@@ -60,30 +58,57 @@ function eat(table_library) {
 
     $("#food-ontable1, #food-ontable2, #food-ontable3, #food-ontable4").css("display", "none");
 
-    let food_text = ["這薯條看起來不錯!", "這漢堡好香!", "可樂冰冰涼涼!", "吐司很適合早餐!"];
+    let food_text1_arr = ["1這薯條看起來不錯!", "1這漢堡好香!", "1可樂冰冰涼涼!", "1吐司很適合早餐!"];
+    let food_text2_arr = ["2這薯條看起來不錯!", "2這漢堡好香!", "2可樂冰冰涼涼!", "2吐司很適合早餐!"];
+    let food_text3_arr = ["3這薯條看起來不錯!", "3這漢堡好香!", "3可樂冰冰涼涼!", "3吐司很適合早餐!"];
+    let food_text4_arr = ["4這薯條看起來不錯!", "4這漢堡好香!", "4可樂冰冰涼涼!", "4吐司很適合早餐!"];
+
+    if (table_library == 1) {
+        var r1 = getRandomInt(food1_arr.length);
+        $("#food-ontable1").css("display", "block").attr("src", food1_arr[r1].text(food_text1_arr[r1]));
+        playDialog("food-ontable1");
+    }
+}
+
+
+/*食物顯示*/
+/*function eat(table_library) {
+    let food1_arr = ["../IMG/enjoy_img/fta_01.png"];
+    let food2_arr = ["../IMG/enjoy_img/fta_02.png"];
+    let food3_arr = ["../IMG/enjoy_img/fta_03.png"];
+    let food4_arr = ["../IMG/enjoy_img/fta_04.png"];
+
+    $("#food-ontable1, #food-ontable2, #food-ontable3, #food-ontable4").css("display", "none");
+
+    let food_text_arr = ["1這薯條看起來不錯!", "1這漢堡好香!", "1可樂冰冰涼涼!", "1吐司很適合早餐!"];
+    let food_text2 = ["2這薯條看起來不錯!", "2這漢堡好香!", "2可樂冰冰涼涼!", "2吐司很適合早餐!"];
+    let food_text3 = ["3這薯條看起來不錯!", "3這漢堡好香!", "3可樂冰冰涼涼!", "3吐司很適合早餐!"];
+    let food_text4 = ["4這薯條看起來不錯!", "4這漢堡好香!", "4可樂冰冰涼涼!", "4吐司很適合早餐!"];
+
 
     let r = table_library - 1; // 取得對應的對話
-    $("#say").css("color", "white").text(food_text[r]);
+    $("#say").css("color", "white").text(food_text_arr[r]);
     playDialog(); // 這樣點食物才會顯示特定的對話框
 
 
     if (table_library == 1) {
-        $("#food-ontable1").css("display", "block").attr("src", food1_arr[0]);
-        playDialog("food-ontable1");
+        var r1 = getRandomInt(food_text_arr.length);
+        $("#food-ontable1").css("display", "block").attr("src", food_text_arr[r1]);
+        //playDialog("food-ontable1");
     } 
     if (table_library == 2) {
-        $("#food-ontable2").css("display", "block").attr("src", food2_arr[0]);
+        $("#food-ontable2").css("display", "block").attr("src", food2_arr[2]);
         //playDialog("food-ontable2");
     } 
     if (table_library == 3) {
-        $("#food-ontable3").css("display", "block").attr("src", food3_arr[0]);
+        $("#food-ontable3").css("display", "block").attr("src", food3_arr[3]);
         //playDialog("food-ontable3");
     }
     if (table_library == 4) {
-        $("#food-ontable4").css("display", "block").attr("src", food4_arr[0]);
+        $("#food-ontable4").css("display", "block").attr("src", food4_arr[4]);
         //playDialog("food-ontable4");
     }
-}
+}*/
 
 
 
