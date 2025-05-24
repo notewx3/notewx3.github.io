@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>米娜飯飯街口</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="JS/jquery-3.7.1.min.js"></script>
+    <script src="JS/script_use.js"></script>
+</head>
+<body>
+    <header>
+        <h1>米娜飯飯街口</h1>
+    </header>
+    <main class="BK">
+    <main class="KV">
+
+
+        <section class="menu">  
+                <!--下面漢堡選單按鈕-->
+            <button class="menu_btn" onclick="bong"()>&#9776;</button> 
+            <div class="block01"  id="show-dialog" id="menu">
+                <!--按鈕加了出現效果show-dialog(顯示對話框)-->
+                
+                <button class="btn" onclick="speak(1)">問候</button>
+
+                <div class="cut"></div>
+
+                <button class="btn" onclick="speak(2)">聊天</button>
+
+                <div class="cut"></div>
+
+                <button class="btn" onclick="speak(3)">勉勵</button>
+
+                <div class="cut"></div>
+
+                <!-- <a href="mywork.html" class="btn">作業網頁</a>
+                
+                <div class="cut"></div>
+                
+                <a href="menu_03.html" class="btn">菜單效果</a>
+                
+                <div class="cut"></div> -->
+                
+                
+                <ul class="icon_01">
+                    <li class="icon_02">食物</li>
+                    <div class="block02" id="show-food">
+                        <div><input class="pickfood01" onclick="eat(1)" type="button" alt="薯條"></div>
+                        <div><input class="pickfood02" onclick="eat(2)" type="button" alt="漢堡"></div>
+                        <div><input class="pickfood03" onclick="eat(3)" type="button" alt="可樂"></div>
+                        <div><input class="pickfood04" onclick="eat(4)" type="button" alt="吐司"></div>
+                    </div>
+                    <li class="icon_02">其他</li>
+                    <div class="block02">
+                        <div><img src="IMG/enjoy_img/more_01.png" alt="睡覺"></div>
+                        <div><img src="IMG/enjoy_img/more_02.png" alt="遊戲"></div>
+                        <div><img src="IMG/enjoy_img/more_01.png" alt="睡覺"></div>
+                        <div><img src="IMG/enjoy_img/more_02.png" alt="遊戲"></div>
+                    </div>
+                </ul>
+            </div>
+        </section>
+
+        <section class="home_screen">
+            <div id="dialog" class="block_say"><!--新增動畫效果-->
+            <hgroup class="speech-bubble">
+                <h3 id="say">你可能在想我到底在做甚麼挖歌<br>但其實窩也不知道@@</h3>
+            </hgroup>
+            </div>
+            <div>
+                <div id="food-ontable1" class="hidden"></div>
+                <div id="food-ontable2" class="hidden"></div>
+                <div id="food-ontable3" class="hidden"></div>
+                <div id="food-ontable4" class="hidden"></div>
+
+            </div>
+        </section>
+        
+    </main>
+    </main>
+
+
+
+</body>
+</html>

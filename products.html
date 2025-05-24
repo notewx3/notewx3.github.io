@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>飯飯店｜商品展示</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8ef;
+      color: #4a3b2a;
+    }
+    header {
+      background: #e76f51;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+    .product-section {
+      padding: 2rem 1.5rem;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .product-card {
+      background: #fff;
+      border: 2px solid #f4a261;
+      border-radius: 12px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+    .product-card h3 {
+      margin-top: 0;
+    }
+    .product-card p {
+      font-size: 0.95rem;
+    }
+    .product-card button {
+      margin-top: 1rem;
+      padding: 0.6rem 1rem;
+      border: none;
+      background-color: #81b29a;
+      color: white;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #f4a26110;
+    }
+  </style>
+</head>
+<body>
+  <header>🥢 飯飯店・餵角商品一覽</header>
+
+  <section class="product-section">
+    <div class="product-grid">
+      <div class="product-card">
+        <h3>🌀 魔法便利店 Paro</h3>
+        <p>本月穿越世界：便利商店 × 魔法道具 × 奇妙顧客！<br>
+        每組圖包含角色服裝、情境互動、夜班異變圖，總共6張。</p>
+        <button onclick="location.href='paro.html'">進入商品詳情</button>
+      </div>
+
+      <div class="product-card">
+        <h3>🎂 6/4 奶油酥餅賀卡</h3>
+        <p>節日限定小圖包！以你的角色為主角設計賀卡式插圖，附帶角色留言欄與配件小圖。</p>
+        <button onclick="location.href='cards.html'">查看賀卡內容</button>
+      </div>
+
+      <div class="product-card">
+        <h3>🍱 圖像餵食便當包</h3>
+        <p>客製餵食！提供圖片或文字即可替角色產製完整視覺圖。可選指定姿勢、物件、表情包。</p>
+        <button onclick="location.href='custom.html'">開始餵食</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    店長汪汪 ✦ 副店員箱寶 🧾 敬上｜感謝每位角色的來訪 🌠
+  </footer>
+</body>
+</html>

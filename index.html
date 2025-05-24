@@ -1,86 +1,108 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <title>米娜飯飯街口</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="JS/jquery-3.7.1.min.js"></script>
-    <script src="JS/script_use.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>飯飯店 FanFan Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf2;
+      color: #5b3a29;
+    }
+    header {
+      background: #f4a261;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('your-hero-image.jpg') no-repeat center center/cover;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+    }
+    .hero button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #e76f51;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .section {
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    .category {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 500px;
+      margin: auto;
+    }
+    .category a {
+      display: block;
+      background-color: #ffe8d6;
+      border: 2px solid #f4a261;
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-decoration: none;
+      color: #5b3a29;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+    .category a:hover {
+      transform: scale(1.03);
+      background-color: #fff3e6;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #f4a26110;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>米娜飯飯街口</h1>
-    </header>
-    <main class="BK">
-    <main class="KV">
+  <header>🍚 飯飯店 FanFan Shop</header>
 
+  <div class="hero">
+    <h1>歡迎來到飯飯店</h1>
+    <p>一間專門餵飽角色的小店。</p>
+    <button onclick="location.href='products.html'">看看今天能餵什麼角</button>
+  </div>
 
-        <section class="menu">  
-                <!--下面漢堡選單按鈕-->
-            <button class="menu_btn" onclick="bong"()>&#9776;</button> 
-            <div class="block01"  id="show-dialog" id="menu">
-                <!--按鈕加了出現效果show-dialog(顯示對話框)-->
-                
-                <button class="btn" onclick="speak(1)">問候</button>
+  <section class="section">
+    <h2>本店主打 ✦</h2>
+    <div class="category">
+      <a href="paro.html">🌀 Paro 穿越圖包</a>
+      <a href="cards.html">💌 每月節日賀卡</a>
+      <a href="custom.html">🍱 常駐餵食服務</a>
+    </div>
+  </section>
 
-                <div class="cut"></div>
-
-                <button class="btn" onclick="speak(2)">聊天</button>
-
-                <div class="cut"></div>
-
-                <button class="btn" onclick="speak(3)">勉勵</button>
-
-                <div class="cut"></div>
-
-                <!-- <a href="mywork.html" class="btn">作業網頁</a>
-                
-                <div class="cut"></div>
-                
-                <a href="menu_03.html" class="btn">菜單效果</a>
-                
-                <div class="cut"></div> -->
-                
-                
-                <ul class="icon_01">
-                    <li class="icon_02">食物</li>
-                    <div class="block02" id="show-food">
-                        <div><input class="pickfood01" onclick="eat(1)" type="button" alt="薯條"></div>
-                        <div><input class="pickfood02" onclick="eat(2)" type="button" alt="漢堡"></div>
-                        <div><input class="pickfood03" onclick="eat(3)" type="button" alt="可樂"></div>
-                        <div><input class="pickfood04" onclick="eat(4)" type="button" alt="吐司"></div>
-                    </div>
-                    <li class="icon_02">其他</li>
-                    <div class="block02">
-                        <div><img src="IMG/enjoy_img/more_01.png" alt="睡覺"></div>
-                        <div><img src="IMG/enjoy_img/more_02.png" alt="遊戲"></div>
-                        <div><img src="IMG/enjoy_img/more_01.png" alt="睡覺"></div>
-                        <div><img src="IMG/enjoy_img/more_02.png" alt="遊戲"></div>
-                    </div>
-                </ul>
-            </div>
-        </section>
-
-        <section class="home_screen">
-            <div id="dialog" class="block_say"><!--新增動畫效果-->
-            <hgroup class="speech-bubble">
-                <h3 id="say">你可能在想我到底在做甚麼挖歌<br>但其實窩也不知道@@</h3>
-            </hgroup>
-            </div>
-            <div>
-                <div id="food-ontable1" class="hidden"></div>
-                <div id="food-ontable2" class="hidden"></div>
-                <div id="food-ontable3" class="hidden"></div>
-                <div id="food-ontable4" class="hidden"></div>
-
-            </div>
-        </section>
-        
-    </main>
-    </main>
-
-
-
+  <footer>
+    副店員 ✦ 箱寶 gpt型 敬上｜本網站由角色能量驅動 ⚡
+  </footer>
 </body>
 </html>

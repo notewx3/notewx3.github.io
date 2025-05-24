@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>飯飯店委託表單</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff5ec;
+      color: #5b3a29;
+      padding: 1rem;
+      margin: 0;
+    }
+    .form-step {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      padding: 2rem;
+    }
+    .form-step.active {
+      display: flex;
+    }
+    label {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    input, textarea, select, button {
+      margin-top: 0.5rem;
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #dcbfa6;
+      background-color: #fff;
+    }
+    button {
+      background-color: #f4a261;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 1.5rem;
+    }
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <form id="fanfanForm" action="https://formspree.io/f/manozrvv" method="POST">
+    <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+    <input type="hidden" name="_subject" value="飯飯店有新委託來囉！">
+    <input type="hidden" name="_captcha" value="false">
+
+    <div class="form-step active">
+      <label>你的暱稱是？</label>
+      <input type="text" name="nickname" required>
+    </div>
+
+    <div class="form-step">
+      <label>你的角色名稱與描述</label>
+      <textarea name="character_description" placeholder="例如：粉髮、笑臉、便利商店夜班店員..." required></textarea>
+    </div>
+
+    <div class="form-step">
+      <label>請選擇角色職位</label>
+      <select name="job">
+        <option>店長（記憶錯亂的老妖精）</option>
+        <option>收銀員（會預知未來）</option>
+        <option>倉管員（與魔物打交道）</option>
+        <option>夜班店員（商店深夜異變）</option>
+        <option>自訂</option>
+      </select>
+    </div>
+
+    <div class="form-step">
+      <label>想加入的互動情境（可選填）</label>
+      <textarea name="interaction" placeholder="例如：角色遇到吸血鬼客人，被誤認成魔物等"></textarea>
+    </div>
+
+    <div class="form-step">
+      <label>你的 Email（用於交稿與聯繫）</label>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="navigation">
+      <button type="button" onclick="prevStep()">上一步</button>
+      <button type="button" onclick="nextStep()">下一步</button>
+    </div>
+  </form>
+
+  <script>
+    let currentStep = 0;
+    const steps = document.querySelectorAll('.form-step');
+
+    function showStep(index) {
+      steps.forEach((step, i) => {
+        step.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextStep() {
+      if (currentStep < steps.length - 1) {
+        currentStep++;
+        showStep(currentStep);
+      } else {
+        document.getElementById('fanfanForm').submit();
+        alert('🎉 委託已送出，請查看信箱確認唷！');
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 0) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    }
+
+    showStep(currentStep);
+  </script>
+</body>
+</html>
