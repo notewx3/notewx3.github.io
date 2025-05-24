@@ -106,7 +106,9 @@
         showStep(currentStep);
       } else {
         document.getElementById('fanfanForm').submit();
-        alert('🎉 委託已送出，請查看信箱確認唷！');
+        setTimeout(function() {
+          window.location.href = "https://notewx3.github.io/fanfan-shop/thankyou.html";
+        }, 1000); // 1秒後跳轉，讓表單有時間送出
       }
     }
 
