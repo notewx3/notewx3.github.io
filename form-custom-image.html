@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>圖生圖便當委託｜飯飯店</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf5;
+      color: #3e2e1f;
+      margin: 0;
+      padding: 1.5rem;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #d77a61;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 1.2rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #81b29a;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .warning {
+      font-size: 0.9rem;
+      background: #fff0e3;
+      border-left: 4px solid #f4a261;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>📤 圖生圖便當委託表單</h1>
+  <p>請填寫以下資訊，讓我們將你的角色圖轉換為精緻插圖。副店員箱寶會檢查資料後交給畫圖單位～🍱</p>
+
+  <form action="https://formspree.io/f/YOUR_ID" method="POST">
+    <!-- 替換上方 YOUR_ID 為你的 Formspree ID -->
+    
+    <label for="name">你的暱稱</label>
+    <input type="text" name="name" required />
+
+    <label for="email">Email（交稿用）</label>
+    <input type="email" name="email" required />
+
+    <label for="charName">角色名稱</label>
+    <input type="text" name="charName" required />
+
+    <label for="imageLink">上傳角色草圖 / 三視圖（雲端連結）</label>
+    <input type="url" name="imageLink" placeholder="請提供 Google Drive、Imgur 等連結" required />
+
+    <label for="imageRights">此圖片為你本人繪製，或已獲得授權？</label>
+    <textarea name="imageRights" rows="2" placeholder="是，我是原作者／已取得 XXX 的授權（可附來源）" required></textarea>
+
+    <label for="poseScene">你希望呈現什麼樣的畫面或互動？（可選填）</label>
+    <textarea name="poseScene" rows="3" placeholder="例如：角色拿著奶茶坐在窗邊、與動物互動等"></textarea>
+
+    <label for="stylePref">你有風格偏好嗎？（可選填）</label>
+    <input type="text" name="stylePref" placeholder="如 Q版、可愛、幻想風、不要恐怖等" />
+
+    <div class="warning">
+      ⚠️ <strong>請確認圖像來源安全！</strong><br>
+      本服務不提供角色創角或服裝設計，請僅提交已有設計圖。若圖片來源有爭議，我們保留拒絕製作的權利。
+    </div>
+
+    <input type="hidden" name="_subject" value="新圖生圖便當委託！" />
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_next" value="https://你的網站網址/thankyou.html" />
+
+    <button type="submit">送出委託 🍱</button>
+  </form>
+</body>
+</html>

@@ -49,7 +49,6 @@
 </head>
 <body>
   <form id="fanfanForm" action="https://formspree.io/f/manozrvv" method="POST">
-    <input type="hidden" name="_next" value="https://notewx3.github.io/fanfan-shop/thankyou.html">
     <input type="hidden" name="_subject" value="飯飯店有新委託來囉！">
     <input type="hidden" name="_captcha" value="false">
 
@@ -101,16 +100,22 @@
     }
 
     function nextStep() {
-      if (currentStep < steps.length - 1) {
-        currentStep++;
-        showStep(currentStep);
-      } else {
-        document.getElementById('fanfanForm').submit();
-        setTimeout(function() {
-          window.location.href = "https://notewx3.github.io/fanfan-shop/thankyou.html";
-        }, 1000); // 1秒後跳轉，讓表單有時間送出
-      }
-    }
+  if (currentStep < steps.length - 1) {
+    currentStep++;
+    showStep(currentStep);
+  } else {
+    fetch("https://formspree.io/f/manozrvv", {
+      method: "POST",
+      body: new FormData(document.getElementById("fanfanForm")),
+      headers: { 'Accept': 'application/json' }
+    }).then(() => {
+      window.location.href = "thankyou.html";
+    }).catch((error) => {
+      alert("發送失敗，請稍後再試或聯絡箱寶！");
+      console.error(error);
+    });
+  }
+}
 
     function prevStep() {
       if (currentStep > 0) {
