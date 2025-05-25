@@ -1,67 +1,35 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>賀卡圖包訂購表單｜飯飯店</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fffaf4;
-      color: #4a3b2a;
-      padding: 1rem;
-      margin: 0;
-    }
-    form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-    label {
-      font-weight: bold;
-    }
-    input, textarea {
-      padding: 0.6rem;
-      border-radius: 8px;
-      border: 1px solid #dcbfa6;
-      font-size: 1rem;
-    }
-    button {
-      background-color: #f4a261;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 0.8rem;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="CSS/form-cards.css" />
 </head>
 <body>
   <h2 style="text-align:center;">🎀 訂購賀卡圖包</h2>
-  <form action="https://formspree.io/f/manozrvv" method="POST">
-    <input type="hidden" name="_subject" value="新賀卡委託來自飯飯店！">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="thankyou.html">
+  <form id="fanfanForm" action="https://formspree.io/f/manozrvv" method="POST">
+    <input type="hidden" name="_subject" value="飯飯店有新委託來囉！" />
+    <input type="hidden" name="_captcha" value="false" />
 
     <label>你的暱稱：</label>
-    <input type="text" name="nickname" required>
+    <input type="text" name="nickname" required />
 
     <label>你的 Email：</label>
-    <input type="email" name="email" required>
+    <input type="email" name="email" required />
 
     <label>請提供角色圖連結（可附雲端連結或 Imgur）</label>
-    <input type="url" name="character_image" required>
+    <input type="url" name="character_image" required />
 
     <label>角色暱稱 / 姓名：</label>
-    <input type="text" name="character_name" required>
+    <input type="text" name="character_name" required />
 
     <label>希望附上的角色語錄（可空白）：</label>
     <textarea name="message" rows="3" placeholder="如：祝你酥酥脆脆每一天！"></textarea>
 
-    <button type="submit">送出訂購</button>
+    <button type="submit" onclick="nextStep()">送出訂購</button>
   </form>
+
+  <script src="JS/thankyou.js"></script>
 </body>
 </html>

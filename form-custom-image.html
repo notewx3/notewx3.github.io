@@ -2,66 +2,18 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>圖生圖便當委託｜飯飯店</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fffaf5;
-      color: #3e2e1f;
-      margin: 0;
-      padding: 1.5rem;
-      line-height: 1.6;
-    }
-    h1 {
-      font-size: 1.6rem;
-      margin-bottom: 0.5rem;
-      color: #d77a61;
-    }
-    form {
-      max-width: 600px;
-      margin: auto;
-    }
-    label {
-      display: block;
-      margin-top: 1.2rem;
-      font-weight: bold;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.6rem;
-      margin-top: 0.3rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    button {
-      margin-top: 2rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #81b29a;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .warning {
-      font-size: 0.9rem;
-      background: #fff0e3;
-      border-left: 4px solid #f4a261;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 1.5rem;
-    }
-  </style>
+  <link rel="stylesheet" href="CSS/form-custom-image.css" />
 </head>
 <body>
   <h1>📤 圖生圖便當委託表單</h1>
   <p>請填寫以下資訊，讓我們將你的角色圖轉換為精緻插圖。副店員箱寶會檢查資料後交給畫圖單位～🍱</p>
 
-  <form action="https://formspree.io/f/YOUR_ID" method="POST">
-    <!-- 替換上方 YOUR_ID 為你的 Formspree ID -->
-    
+  <form id="fanfanForm" action="https://formspree.io/f/manozrvv" method="POST">
+    <input type="hidden" name="_subject" value="飯飯店有新委託來囉！" />
+    <input type="hidden" name="_captcha" value="false" />
+
     <label for="name">你的暱稱</label>
     <input type="text" name="name" required />
 
@@ -84,7 +36,7 @@
     <input type="text" name="stylePref" placeholder="如 Q版、可愛、幻想風、不要恐怖等" />
 
     <div class="warning">
-      ⚠️ <strong>請確認圖像來源安全！</strong><br>
+      ⚠️ <strong>請確認圖像來源安全！</strong><br />
       本服務不提供角色創角或服裝設計，請僅提交已有設計圖。若圖片來源有爭議，我們保留拒絕製作的權利。
     </div>
 
@@ -92,7 +44,9 @@
     <input type="hidden" name="_captcha" value="false" />
     <input type="hidden" name="_next" value="https://你的網站網址/thankyou.html" />
 
-    <button type="submit">送出委託 🍱</button>
+    <button type="submit" onclick="nextStep()">送出委託 🍱</button>
   </form>
+
+  <script src="JS/thankyou.js"></script>
 </body>
 </html>

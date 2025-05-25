@@ -1,60 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>飯飯店委託表單</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff5ec;
-      color: #5b3a29;
-      padding: 1rem;
-      margin: 0;
-    }
-    .form-step {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      height: 100vh;
-      padding: 2rem;
-    }
-    .form-step.active {
-      display: flex;
-    }
-    label {
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-    input, textarea, select, button {
-      margin-top: 0.5rem;
-      padding: 0.6rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: 1px solid #dcbfa6;
-      background-color: #fff;
-    }
-    button {
-      background-color: #f4a261;
-      color: white;
-      border: none;
-      cursor: pointer;
-      margin-top: 1.5rem;
-    }
-    .navigation {
-      display: flex;
-      justify-content: space-between;
-    }
-  </style>
+  <link rel="stylesheet" href="CSS/form-paro.css" />
 </head>
 <body>
   <form id="fanfanForm" action="https://formspree.io/f/manozrvv" method="POST">
-    <input type="hidden" name="_subject" value="飯飯店有新委託來囉！">
-    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="飯飯店有新委託來囉！" />
+    <input type="hidden" name="_captcha" value="false" />
 
     <div class="form-step active">
       <label>你的暱稱是？</label>
-      <input type="text" name="nickname" required>
+      <input type="text" name="nickname" required />
     </div>
 
     <div class="form-step">
@@ -80,7 +39,7 @@
 
     <div class="form-step">
       <label>你的 Email（用於交稿與聯繫）</label>
-      <input type="email" name="email" required>
+      <input type="email" name="email" required />
     </div>
 
     <div class="navigation">
@@ -89,42 +48,6 @@
     </div>
   </form>
 
-  <script>
-    let currentStep = 0;
-    const steps = document.querySelectorAll('.form-step');
-
-    function showStep(index) {
-      steps.forEach((step, i) => {
-        step.classList.toggle('active', i === index);
-      });
-    }
-
-    function nextStep() {
-  if (currentStep < steps.length - 1) {
-    currentStep++;
-    showStep(currentStep);
-  } else {
-    fetch("https://formspree.io/f/manozrvv", {
-      method: "POST",
-      body: new FormData(document.getElementById("fanfanForm")),
-      headers: { 'Accept': 'application/json' }
-    }).then(() => {
-      window.location.href = "thankyou.html";
-    }).catch((error) => {
-      alert("發送失敗，請稍後再試或聯絡箱寶！");
-      console.error(error);
-    });
-  }
-}
-
-    function prevStep() {
-      if (currentStep > 0) {
-        currentStep--;
-        showStep(currentStep);
-      }
-    }
-
-    showStep(currentStep);
-  </script>
+  <script src="JS/thankyou.js"></script>
 </body>
 </html>
